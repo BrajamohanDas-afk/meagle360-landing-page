@@ -300,7 +300,7 @@
   @media (max-width:860px){.flow{flex-direction:column;}.flow-step{border-right:none;border-bottom:1px solid var(--line);}.flow-step:last-child{border-bottom:none;}.flow-arrow{display:none;}}
 
   /* ---------- pricing ---------- */
-  .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
   .price-card{
     border:1px solid var(--line);border-radius:14px;padding:28px 24px;background:var(--white);
     display:flex;flex-direction:column;
