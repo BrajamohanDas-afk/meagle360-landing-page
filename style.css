@@ -120,41 +120,40 @@
     .hero-logo-card{max-width:220px;}
   }
 
-  /* ---------- thread (signature element) ---------- */
-  .thread-wrap{margin-top:84px;position:relative;}
-  .thread-label{
-    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gray);
-    margin-bottom:18px;letter-spacing:.02em;
+  /* ---------- social proof ---------- */
+  .proof-strip{
+    margin-top:86px;padding:42px 18px 28px;
+    border-top:1px solid rgba(18,107,255,.14);
+    text-align:center;
   }
-  .thread{
-    position:relative;display:flex;gap:0;
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    overflow-x:auto;
+  .proof-line{
+    max-width:760px;margin:0 auto 34px;
+    font-size:20px;font-weight:700;line-height:1.45;color:var(--ink);
   }
-  .thread::-webkit-scrollbar{display:none;}
-  .stage{
-    flex:1 1 0;min-width:168px;padding:22px 20px 24px;position:relative;
-    border-right:1px solid var(--line);
+  .proof-logos{
+    display:flex;align-items:center;justify-content:center;
+    gap:34px 56px;flex-wrap:wrap;
   }
-  .stage:last-child{border-right:none;}
-  .stage-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray);display:block;margin-bottom:10px;}
-  .stage-title{font-size:14.5px;font-weight:600;margin-bottom:6px;}
-  .stage-desc{font-size:12.5px;color:var(--gray);line-height:1.5;}
-  .stage::after{
-    content:'';position:absolute;top:-1px;left:0;right:0;height:2px;background:var(--line);
+  .proof-logo{
+    display:inline-flex;align-items:center;gap:9px;
+    color:var(--ink-soft);font-size:18px;font-weight:700;
+    letter-spacing:0;
   }
-  .stage.is-lead::after{background:var(--amber);}
-  .stage.is-pipe::after{background:var(--amber);}
-  .stage.is-support::after{background:var(--teal);}
-  .stage.is-invoice::after{background:var(--teal);}
-  .stage.is-paid{background:var(--ink);color:var(--paper);}
-  .stage.is-paid::after{background:var(--teal);}
-  .stage.is-paid .stage-num,.stage.is-paid .stage-desc{color:#B9C3CC;}
-  .stage-dot{
-    position:absolute;top:-5px;left:20px;width:9px;height:9px;border-radius:50%;
-    background:var(--paper);border:2px solid var(--line);
+  .proof-logo::before{
+    content:'';display:block;width:15px;height:15px;border-radius:4px;
+    background:linear-gradient(135deg,var(--teal),var(--amber));
+    box-shadow:0 6px 16px rgba(18,107,255,.18);
+    transform:rotate(45deg);
   }
-  .stage.is-paid .stage-dot{border-color:var(--teal);background:var(--ink);}
+  .proof-logo:nth-child(2n){font-family:'Fraunces',serif;font-size:21px;font-weight:600;}
+  .proof-logo:nth-child(3n)::before{border-radius:50%;transform:none;}
+  @media (max-width:700px){
+    .proof-strip{margin-top:56px;padding:32px 0 10px;}
+    .proof-line{font-size:17px;margin-bottom:26px;}
+    .proof-logos{gap:18px 26px;}
+    .proof-logo{font-size:15.5px;}
+    .proof-logo:nth-child(2n){font-size:18px;}
+  }
 
   /* ---------- lead intake section ---------- */
   .lead-intake{
